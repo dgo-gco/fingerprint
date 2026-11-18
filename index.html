@@ -2,8 +2,8 @@
 <html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Descubre en tiempo real cómo tus movimientos, teclas y clics se convierten en datos."><title>Huella viva — Cada gesto cuenta</title>
 <style>
 :root{color-scheme:dark;--bg:#101713;--panel:#18221b;--line:#344237;--ink:#eef2e6;--muted:#a3b09f;--lime:#cdf58b;--orange:#ffb58c}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1320px;margin:auto;padding:28px 40px 60px}a{color:inherit}button,a,textarea{touch-action:manipulation}button{font:inherit;cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid var(--orange);outline-offset:5px}header,.row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}header{border-bottom:1px solid var(--line);padding-bottom:24px}.brand{font-size:24px;font-weight:800;letter-spacing:-1px}.brand span{color:var(--lime)}nav{display:flex;gap:28px;font-size:13px;color:var(--muted)}nav a{text-decoration:none}.badge,.eyebrow{font:11px monospace;letter-spacing:1.5px;text-transform:uppercase}.badge{border:1px solid var(--line);border-radius:30px;padding:8px 12px;color:var(--lime)}.hero{display:grid;grid-template-columns:1.4fr 1fr;align-items:center;gap:55px;padding:65px 0 40px}.eyebrow{color:var(--lime)}h1{font-size:clamp(46px,5.5vw,76px);line-height:1.03;letter-spacing:-3.7px;font-weight:500;margin:22px 0}h1 em{font-style:normal;color:var(--lime)}.hero p{color:var(--muted);max-width:540px;font-size:16px}.hero-art{height:270px;position:relative;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;background:repeating-radial-gradient(ellipse at center,transparent 0 23px,#344237 24px 25px,transparent 26px 40px);transform:rotate(-13deg)}.hero-art strong{font:70px monospace;color:var(--lime);transform:rotate(13deg);background:var(--bg);padding:10px}.art-label{position:absolute;font:11px monospace;background:var(--lime);color:var(--bg);padding:6px 12px;bottom:24px;right:4px;transform:rotate(13deg)}.controls{display:flex;gap:8px;flex-wrap:wrap}button{border:1px solid var(--line);border-radius:6px;padding:9px 14px;background:transparent;color:var(--ink);font-size:13px}button:hover{background:#2b392c}.primary{background:var(--lime);color:#172313;border-color:var(--lime);font-weight:650}.primary:hover{background:#dcffa5}#status{font:12px monospace;color:var(--lime)}.stats{display:grid;grid-template-columns:repeat(4,1fr);border-block:1px solid var(--line);margin:20px 0 24px}.stat{padding:20px;border-right:1px solid var(--line)}.stat:first-child{padding-left:0}.stat:last-child{border:0}.stat strong{display:block;font:42px/1.2 monospace;letter-spacing:-2px}.stat small{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:1.35fr 1fr;gap:20px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:24px;min-width:0}h2{font-size:20px;letter-spacing:-.6px;margin:0 0 10px;font-weight:550}h3{font-size:21px;font-weight:500;margin:12px 0}p{margin:8px 0}.muted,small{color:var(--muted)}.panel p{font-size:13px}.num{color:var(--lime);font:12px monospace;margin-right:9px}.chip{font:10px monospace;color:var(--lime);text-transform:uppercase;letter-spacing:1px}#field{height:290px;position:relative;margin:18px 0 14px;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:#101a13;background-image:radial-gradient(#3d5139 1px,transparent 1px);background-size:20px 20px;touch-action:none}canvas{width:100%;height:100%;display:block}.field-note{position:absolute;left:15px;top:13px;font:10px monospace;color:var(--muted);pointer-events:none}.coords{display:flex;gap:24px;font:12px monospace;flex-wrap:wrap}.coords b{color:var(--lime)}.terminal{background:#0b120d;border-color:#2a3b2d}.terminal pre{color:var(--lime);font:12px/1.7 monospace;white-space:pre-wrap;overflow-wrap:anywhere;min-height:153px}#feed{height:140px;overflow:auto;border-top:1px solid var(--line)}.event{font:10px/1.6 monospace;border-bottom:1px solid #243027;padding:5px 0;display:flex;justify-content:space-between;gap:14px}.event span{color:var(--orange)}.section{margin-top:42px}.section-title{font-size:32px;margin:13px 0 22px;letter-spacing:-1px}textarea{width:100%;height:94px;resize:vertical;border:1px solid var(--line);border-radius:7px;background:var(--bg);padding:14px;color:var(--ink);font:15px system-ui;margin:14px 0}.keys{display:flex;flex-wrap:wrap;gap:7px;min-height:38px}.key{font:12px monospace;border:1px solid var(--line);border-bottom-width:3px;padding:6px 10px;border-radius:5px;color:var(--orange)}.track{height:7px;background:var(--bg);border-radius:10px;overflow:hidden;margin:20px 0}#scrollbar{height:100%;background:var(--orange);width:0}dl{margin:0}dl div{display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid var(--line);padding:11px 0;font-size:13px}dt{color:var(--muted)}dd{margin:0;text-align:right;overflow-wrap:anywhere;max-width:60%}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}.step{border-top:1px solid var(--line);padding-top:18px}.step p{font-size:14px;color:var(--muted)}.note{border-left:3px solid var(--lime);padding:22px;background:var(--panel);margin-top:24px}.note p{font-size:14px;color:var(--muted)}.note a,.code a{color:var(--lime);font-size:13px}.code pre{overflow:auto;font:12px/1.8 monospace;color:var(--lime);padding:20px;background:var(--bg);border-radius:6px}footer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);margin-top:40px;padding-top:20px}#notice{font-size:12px;color:var(--muted);min-height:20px}details{margin-top:12px;font-size:13px}summary{cursor:pointer;color:var(--lime)}@media(max-width:800px){main{padding:20px}.hero{grid-template-columns:1fr;padding:38px 0 24px;gap:15px}.hero-art{display:none}.grid,.steps{grid-template-columns:1fr}nav{display:none}.stats{grid-template-columns:repeat(2,1fr)}.stat{border-bottom:1px solid var(--line)}.stat:nth-child(3){padding-left:0}.stat strong{font-size:34px}h1{letter-spacing:-2px}.panel{padding:18px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.history{max-height:180px;overflow:auto;padding:10px;background:var(--bg);border-radius:6px;overflow-wrap:anywhere}.history p{font:12px/1.5 monospace;border-bottom:1px solid var(--line);padding:5px}input[type=file]{max-width:100%;margin:16px 0}input[type=checkbox]{accent-color:var(--lime)}textarea:disabled{opacity:.55}</style></head><body><main>
-<header><div class="brand">huella<span>●</span>viva</div><nav><a href="#lab">El experimento</a><a href="#context">Tu navegador</a><a href="#meaning">¿Para qué sirve?</a></nav><span class="badge">Laboratorio interactivo / 01</span></header>
+.history{max-height:180px;overflow:auto;padding:10px;background:var(--bg);border-radius:6px;overflow-wrap:anywhere}.history p{font:12px/1.5 monospace;border-bottom:1px solid var(--line);padding:5px}input[type=file]{max-width:100%;margin:16px 0}input[type=checkbox]{accent-color:var(--lime)}textarea:disabled{opacity:.55}.languages{display:flex;gap:4px}.languages button{padding:7px 10px}.languages button[aria-pressed="true"]{background:var(--lime);color:var(--bg);border-color:var(--lime);font-weight:700}.file-picker{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:9px 14px;cursor:pointer}.file-picker:focus-within{outline:3px solid var(--orange);outline-offset:5px}.file-picker input{position:absolute;width:1px;height:1px;opacity:0}header .badge{margin-left:auto}@media(max-width:600px){header .badge{display:none}.languages{margin-left:auto}}</style></head><body><main>
+<header><div class="brand">huella<span>●</span>viva</div><nav><a href="#lab">El experimento</a><a href="#context">Tu navegador</a><a href="#meaning">¿Para qué sirve?</a></nav><span class="badge">Laboratorio interactivo / 01</span><div class="languages" role="group" aria-label="Language / Idioma / Langue"><button type="button" data-language="es" lang="es" aria-label="Español" aria-pressed="true">ESP</button><button type="button" data-language="en" lang="en" aria-label="English" aria-pressed="false">ENG</button><button type="button" data-language="fr" lang="fr" aria-label="Français" aria-pressed="false">FRA</button></div></header>
 <section class="hero"><div><div class="eyebrow">La parte invisible de estar online</div><h1>Un pequeño gesto.<br><em>Un montón de datos.</em></h1><p>Mueve el mouse. Pulsa una tecla. Baja por la página.<br>Descubre el rastro que dejas, mientras lo estás dejando.</p></div><div class="hero-art" aria-hidden="true"><strong>↖</strong><span class="art-label">HUMANO → EVENTO → DATO</span></div></section>
 <section id="lab"><div class="row"><span id="status" role="status">● CAPTURA ACTIVA · SOLO EN ESTA PÁGINA</span><div class="controls"><button id="pause" class="primary">Ⅱ Pausar</button><button id="reset">↺ Borrar sesión</button><button id="export">Exportar JSON ↓</button><button id="download">Descargar sitio ↓</button></div></div>
 <div class="stats"><div class="stat"><strong id="total">0</strong><small>EVENTOS OBSERVADOS</small></div><div class="stat"><strong id="rate">0</strong><small>EVENTOS / ÚLTIMO SEGUNDO</small></div><div class="stat"><strong id="bytes">0 B</strong><small>VOLUMEN JSON ACUMULADO¹</small></div><div class="stat"><strong id="elapsed">0 s</strong><small>TIEMPO DE CAPTURA</small></div></div>
@@ -16,7 +16,7 @@
 <section class="panel"><h2><span class="num">05</span>Seleccionar y pegar también cuentan</h2><p id="selection-demo">Selecciona algunas palabras de este párrafo. Puedes elegir una frase, cambiarla y observar el resultado.</p><p class="muted">Selección actual: <strong id="selection-result">—</strong></p><textarea id="paste-demo" aria-label="Campo de pegado de prueba" placeholder="Pega aquí un texto ficticio…"></textarea><p id="paste-result" class="muted">Aún no has pegado nada en este campo.</p><p class="muted">Solo mostramos la longitud al pegar. No leemos tu portapapeles en segundo plano. La selección solo se observa dentro del párrafo de prueba.</p></section></div>
 <div class="grid section"><section class="panel"><div class="row"><h2><span class="num">06</span>Tu recorrido, reconstruido</h2><button id="replay">▶ Reproducir últimos 15 s</button></div><p class="muted">Vista normalizada de la ventana: cada punto es una posición observada. El tamaño real de la página puede cambiar.</p><canvas id="replay-canvas" width="600" height="240" style="height:240px;background:#101713;border:1px solid var(--line);border-radius:8px" aria-label="Reproducción del recorrido del puntero"></canvas><p id="replay-status" role="status">Mueve el puntero para crear un recorrido.</p><dl><div><dt>Distancia observada</dt><dd id="distance">0 px CSS</dd></div><div><dt>Velocidad del último tramo</dt><dd id="speed">0 px/s</dd></div><div><dt>Clics consecutivos cercanos¹</dt><dd id="clusters">0</dd></div></dl><p class="muted">¹ Menos de 800 ms y 30 px entre clics. No demuestra frustración. La distancia suma tramos observados, no movimientos fuera de esta página.</p></section>
 <section class="panel"><h2><span class="num">07</span>¿Qué llegó a estar en pantalla?</h2><p class="muted">Tiempo aproximado con al menos la mitad del bloque en la ventana y la pestaña visible. No demuestra lectura ni atención.</p><dl id="exposure"></dl><p class="muted">La medición se detiene al pausar la captura. La superposición de otras ventanas no siempre se puede detectar.</p><h3>Tu punto de entrada</h3><p id="referrer" class="muted"></p><p class="muted">Mostramos solo el origen disponible, sin rutas ni parámetros. No es acceso a tu historial de navegación.</p></section></div>
-<section class="panel section"><h2><span class="num">08</span>Elegir un archivo ya revela información</h2><p class="muted">Selecciona un archivo de prueba para ver sus metadatos antes de cualquier subida. Esta demo no lee su contenido ni lo sube.</p><input id="file-demo" type="file" aria-label="Archivo de prueba para mostrar metadatos"><dl id="file-meta"></dl><p class="muted">Solo se puede inspeccionar el archivo que tú eliges. El nombre no se incluye en la exportación.</p></section>
+<section class="panel section"><h2><span class="num">08</span>Elegir un archivo ya revela información</h2><p class="muted">Selecciona un archivo de prueba para ver sus metadatos antes de cualquier subida. Esta demo no lee su contenido ni lo sube.</p><label class="file-picker"><span>Elegir archivo</span><input id="file-demo" type="file" aria-label="Archivo de prueba para mostrar metadatos"></label><dl id="file-meta"></dl><p class="muted">Solo se puede inspeccionar el archivo que tú eliges. El nombre no se incluye en la exportación.</p></section>
 <section class="note"><h2>Hechos, hipótesis y límites</h2><div class="steps"><div><h3>Esto ocurrió</h3><p id="facts">Todavía no hay actividad suficiente.</p></div><div><h3>Podríamos suponer…</h3><p>Volver a una zona podría indicar interés o dificultad. Corregir texto podría ser una revisión normal. Son posibilidades, no conclusiones sobre ti.</p></div><div><h3>Esto no lo sabemos</h3><p>No sabemos qué mirabas, qué pensabas ni por qué hiciste una pausa. El puntero no es un seguimiento de tus ojos.</p></div></div></section>
 </section>
 <section class="section" id="context"><div class="eyebrow">Incluso antes de tu primer clic</div><h2 class="section-title">Tu navegador ya trae contexto.</h2><div class="grid"><section class="panel"><dl id="device"></dl><p class="muted">Lecturas al abrir la página. El navegador puede limitar o modificar estos valores por privacidad.</p></section><section class="panel"><h3>Hay límites a lo que una página sabe.</h3><p class="muted">Tu nombre, tus contraseñas, el contenido de otras pestañas y tu historial completo no aparecen automáticamente en estos eventos.</p><h3>Otros datos necesitan permiso.</h3><p class="muted">La cámara, el micrófono y la ubicación precisa normalmente requieren autorización. Aquí no los solicitamos.</p><h3>Conectarse también deja un rastro.</h3><p class="muted">Un servidor recibe información de la conexión, como la IP. Esta demo no consulta tu IP. El alojamiento puede mantener sus propios registros técnicos.</p></section></div></section>
@@ -33,6 +33,673 @@
 <footer><p>¹ Suma de los tamaños de los eventos serializados en JSON UTF-8. No equivale a tráfico de red ni a memoria utilizada. La frecuencia de eventos depende del navegador y del dispositivo.</p><p>Se conservan los últimos 3.000 eventos y 800 puntos de dibujo en memoria. El contador incluye todos los eventos observados. Exportar genera un archivo local con el resumen y los eventos retenidos. Borrar o recargar elimina la sesión de la demo.</p><p>HUELLA VIVA · Un laboratorio para mirar lo invisible.</p></footer></main>
 <script>
 'use strict';
+
+// Keep canonical Spanish sources separate from rendered text and user data.
+let language='es';
+const translations={
+  "[campo vacío]": {"en":"[empty field]","fr":"[champ vide]"},
+  "edición": {"en":"edit","fr":"modification"},
+  "El experimento": {
+    "en": "The experiment",
+    "fr": "L’expérience"
+  },
+  "Tu navegador": {
+    "en": "Your browser",
+    "fr": "Votre navigateur"
+  },
+  "¿Para qué sirve?": {
+    "en": "What is it for?",
+    "fr": "À quoi ça sert ?"
+  },
+  "Laboratorio interactivo / 01": {
+    "en": "Interactive lab / 01",
+    "fr": "Laboratoire interactif / 01"
+  },
+  "La parte invisible de estar online": {
+    "en": "The invisible side of being online",
+    "fr": "La part invisible de la vie en ligne"
+  },
+  "Un pequeño gesto.": {
+    "en": "One small gesture.",
+    "fr": "Un petit geste."
+  },
+  "Un montón de datos.": {
+    "en": "A lot of data.",
+    "fr": "Beaucoup de données."
+  },
+  "Mueve el mouse. Pulsa una tecla. Baja por la página.": {
+    "en": "Move your mouse. Press a key. Scroll down.",
+    "fr": "Bougez la souris. Appuyez sur une touche. Faites défiler la page."
+  },
+  "Descubre el rastro que dejas, mientras lo estás dejando.": {
+    "en": "Discover the trail you leave, as you leave it.",
+    "fr": "Découvrez les traces que vous laissez, en temps réel."
+  },
+  "HUMANO → EVENTO → DATO": {
+    "en": "HUMAN → EVENT → DATA",
+    "fr": "HUMAIN → ÉVÉNEMENT → DONNÉE"
+  },
+  "● CAPTURA ACTIVA · SOLO EN ESTA PÁGINA": {
+    "en": "● RECORDING · THIS PAGE ONLY",
+    "fr": "● CAPTURE ACTIVE · SUR CETTE PAGE UNIQUEMENT"
+  },
+  "Ⅱ CAPTURA PAUSADA": {
+    "en": "Ⅱ RECORDING PAUSED",
+    "fr": "Ⅱ CAPTURE EN PAUSE"
+  },
+  "Ⅱ Pausar": {
+    "en": "Ⅱ Pause",
+    "fr": "Ⅱ Mettre en pause"
+  },
+  "▶ Reanudar": {
+    "en": "▶ Resume",
+    "fr": "▶ Reprendre"
+  },
+  "↺ Borrar sesión": {
+    "en": "↺ Clear session",
+    "fr": "↺ Effacer la session"
+  },
+  "Exportar JSON ↓": {
+    "en": "Export JSON ↓",
+    "fr": "Exporter en JSON ↓"
+  },
+  "Descargar sitio ↓": {
+    "en": "Download site ↓",
+    "fr": "Télécharger le site ↓"
+  },
+  "EVENTOS OBSERVADOS": {
+    "en": "OBSERVED EVENTS",
+    "fr": "ÉVÉNEMENTS OBSERVÉS"
+  },
+  "EVENTOS / ÚLTIMO SEGUNDO": {
+    "en": "EVENTS / LAST SECOND",
+    "fr": "ÉVÉNEMENTS / DERNIÈRE SECONDE"
+  },
+  "VOLUMEN JSON ACUMULADO¹": {
+    "en": "TOTAL JSON VOLUME¹",
+    "fr": "VOLUME JSON CUMULÉ¹"
+  },
+  "TIEMPO DE CAPTURA": {
+    "en": "RECORDING TIME",
+    "fr": "DURÉE DE CAPTURE"
+  },
+  "Tu movimiento tiene coordenadas": {
+    "en": "Your movement has coordinates",
+    "fr": "Vos mouvements ont des coordonnées"
+  },
+  "Mouse / touch": {
+    "en": "Mouse / touch",
+    "fr": "Souris / tactile"
+  },
+  "Dibuja en la zona. Haz clic para dejar una marca. Mira cómo un solo movimiento se convierte en muchos eventos.": {
+    "en": "Draw in the area. Click to leave a mark. Watch one movement turn into many events.",
+    "fr": "Dessinez dans la zone. Cliquez pour laisser une marque. Voyez un seul mouvement devenir de nombreux événements."
+  },
+  "Rastro de movimientos y marcas de clic": {
+    "en": "Movement trail and click marks",
+    "fr": "Tracé des mouvements et marques de clics"
+  },
+  "MUEVE EL PUNTERO O DESLIZA EL DEDO AQUÍ": {
+    "en": "MOVE YOUR POINTER OR SLIDE YOUR FINGER HERE",
+    "fr": "DÉPLACEZ LE POINTEUR OU GLISSEZ LE DOIGT ICI"
+  },
+  "CLICS": {
+    "en": "CLICKS",
+    "fr": "CLICS"
+  },
+  "TIPO": {
+    "en": "TYPE",
+    "fr": "TYPE"
+  },
+  "X e Y: píxeles CSS desde la esquina superior izquierda de la ventana. También contamos movimientos fuera de esta zona.": {
+    "en": "X and Y: CSS pixels from the top-left corner of the window. We also count movements outside this area.",
+    "fr": "X et Y : pixels CSS depuis le coin supérieur gauche de la fenêtre. Les mouvements en dehors de cette zone sont aussi comptés."
+  },
+  "Lo que recibe JavaScript": {
+    "en": "What JavaScript receives",
+    "fr": "Ce que reçoit JavaScript"
+  },
+  "● Live": {
+    "en": "● Live",
+    "fr": "● En direct"
+  },
+  "Eventos reales de tu sesión, no una animación de datos ficticios.": {
+    "en": "Real events from your session, not an animation of fictional data.",
+    "fr": "De vrais événements de votre session, pas une animation de données fictives."
+  },
+  "Esperando tu primer gesto…": {
+    "en": "Waiting for your first gesture…",
+    "fr": "En attente de votre premier geste…"
+  },
+  "Últimos eventos": {
+    "en": "Latest events",
+    "fr": "Derniers événements"
+  },
+  "Un evento puede incluir posición, tiempo, tipo de entrada y el elemento con el que interactúas.": {
+    "en": "An event can include position, time, input type and the element you interact with.",
+    "fr": "Un événement peut inclure la position, l’heure, le type d’entrée et l’élément avec lequel vous interagissez."
+  },
+  "Procesamiento en tu navegador. Esta demo no envía tus interacciones a un servidor.": {
+    "en": "Processed in your browser. This demo does not send your interactions to a server.",
+    "fr": "Traitement dans votre navigateur. Cette démo n’envoie pas vos interactions à un serveur."
+  },
+  "Hasta tus teclas tienen un ritmo": {
+    "en": "Even your keystrokes have a rhythm",
+    "fr": "Même vos frappes ont un rythme"
+  },
+  "Escribe una frase de prueba. Solo este campo registra teclas; evita introducir información personal.": {
+    "en": "Type a test sentence. Only this field records keys; avoid entering personal information.",
+    "fr": "Écrivez une phrase de test. Seul ce champ enregistre les touches ; évitez les informations personnelles."
+  },
+  "Estoy dejando una huella digital…": {
+    "en": "I am leaving a digital footprint…",
+    "fr": "Je laisse une empreinte numérique…"
+  },
+  "Campo de prueba del teclado": {
+    "en": "Keyboard test field",
+    "fr": "Champ de test du clavier"
+  },
+  "Tu próxima tecla": {
+    "en": "Your next key",
+    "fr": "Votre prochaine touche"
+  },
+  "pulsaciones ·": {
+    "en": "keystrokes ·",
+    "fr": "frappes ·"
+  },
+  "ms entre las últimas pulsaciones": {
+    "en": "ms between the last keystrokes",
+    "fr": "ms entre les dernières frappes"
+  },
+  "¿Qué se puede observar?": {
+    "en": "What can be observed?",
+    "fr": "Que peut-on observer ?"
+  },
+  "La tecla, el código físico, si se mantiene pulsada y el intervalo entre pulsaciones. Un evento input también detecta cambios realizados por teclados virtuales. Esta demo registra la longitud del texto, no su contenido completo.": {
+    "en": "The key, its physical code, whether it is held down and the time between keystrokes. An input event also detects changes from virtual keyboards. This demo records text length, not its full content.",
+    "fr": "La touche, son code physique, son maintien et l’intervalle entre les frappes. Un événement input détecte aussi les modifications des claviers virtuels. Cette démo enregistre la longueur du texte, pas son contenu complet."
+  },
+  "Tus pausas también dejan señales": {
+    "en": "Your pauses leave signals too",
+    "fr": "Vos pauses laissent aussi des indices"
+  },
+  "Haz scroll, cambia el tamaño de la ventana o visita otra pestaña y vuelve.": {
+    "en": "Scroll, resize the window or visit another tab and come back.",
+    "fr": "Faites défiler la page, redimensionnez la fenêtre ou passez à un autre onglet puis revenez."
+  },
+  "Profundidad máxima": {
+    "en": "Maximum scroll depth",
+    "fr": "Défilement maximal"
+  },
+  "Eventos de scroll": {
+    "en": "Scroll events",
+    "fr": "Événements de défilement"
+  },
+  "Veces que se ocultó la página": {
+    "en": "Times the page was hidden",
+    "fr": "Nombre de fois où la page a été masquée"
+  },
+  "Sin eventos observados": {
+    "en": "Time without observed events",
+    "fr": "Temps sans événement observé"
+  },
+  "Una pestaña visible no demuestra atención. Una pausa no demuestra desinterés.": {
+    "en": "A visible tab does not prove attention. A pause does not prove disinterest.",
+    "fr": "Un onglet visible ne prouve pas l’attention. Une pause ne prouve pas le désintérêt."
+  },
+  "Más allá del clic · nuevos experimentos": {
+    "en": "Beyond the click · new experiments",
+    "fr": "Au-delà du clic · nouvelles expériences"
+  },
+  "Lo que no sabías que estabas contando.": {
+    "en": "What you did not know you were revealing.",
+    "fr": "Ce que vous révéliez sans le savoir."
+  },
+  "Lo borraste. ¿Desapareció?": {
+    "en": "You deleted it. Is it gone?",
+    "fr": "Vous l’avez effacé. A-t-il disparu ?"
+  },
+  "Activa este experimento y escribe una frase ficticia. Aunque borres el campo, sus versiones anteriores seguirán aquí hasta borrar la sesión. No hay botón de envío.": {
+    "en": "Enable this experiment and type a fictional sentence. Even if you clear the field, earlier versions remain here until you clear the session. There is no submit button.",
+    "fr": "Activez cette expérience et écrivez une phrase fictive. Même si vous videz le champ, ses versions précédentes restent ici jusqu’à l’effacement de la session. Il n’y a pas de bouton d’envoi."
+  },
+  "Mostrar y guardar localmente mis cambios de prueba": {
+    "en": "Show and keep my test edits locally",
+    "fr": "Afficher et conserver localement mes modifications de test"
+  },
+  "Activa el experimento. Usa solo texto ficticio.": {
+    "en": "Enable the experiment. Use fictional text only.",
+    "fr": "Activez l’expérience. Utilisez uniquement du texte fictif."
+  },
+  "Texto ficticio para el historial": {
+    "en": "Fictional text for the history",
+    "fr": "Texte fictif pour l’historique"
+  },
+  "Historial vacío.": {
+    "en": "History is empty.",
+    "fr": "Historique vide."
+  },
+  "Máximo 30 versiones de 240 caracteres. Desactivar elimina este historial. El texto no se incluye en la exportación.": {
+    "en": "Up to 30 versions of 240 characters. Disabling clears this history. The text is not included in the export.",
+    "fr": "Maximum 30 versions de 240 caractères. La désactivation efface cet historique. Le texte n’est pas inclus dans l’export."
+  },
+  "Seleccionar y pegar también cuentan": {
+    "en": "Selecting and pasting count too",
+    "fr": "Sélectionner et coller comptent aussi"
+  },
+  "Selecciona algunas palabras de este párrafo. Puedes elegir una frase, cambiarla y observar el resultado.": {
+    "en": "Select some words in this paragraph. You can choose a phrase, change the selection and watch the result.",
+    "fr": "Sélectionnez quelques mots de ce paragraphe. Vous pouvez choisir une phrase, modifier la sélection et observer le résultat."
+  },
+  "Selección actual:": {
+    "en": "Current selection:",
+    "fr": "Sélection actuelle :"
+  },
+  "Campo de pegado de prueba": {
+    "en": "Paste test field",
+    "fr": "Champ de test du collage"
+  },
+  "Pega aquí un texto ficticio…": {
+    "en": "Paste fictional text here…",
+    "fr": "Collez un texte fictif ici…"
+  },
+  "Aún no has pegado nada en este campo.": {
+    "en": "You have not pasted anything in this field yet.",
+    "fr": "Vous n’avez encore rien collé dans ce champ."
+  },
+  "Solo mostramos la longitud al pegar. No leemos tu portapapeles en segundo plano. La selección solo se observa dentro del párrafo de prueba.": {
+    "en": "We only show the length when you paste. We do not read your clipboard in the background. Selection is only observed within the test paragraph.",
+    "fr": "Nous affichons uniquement la longueur lors du collage. Nous ne lisons pas votre presse-papiers en arrière-plan. La sélection n’est observée que dans le paragraphe de test."
+  },
+  "Tu recorrido, reconstruido": {
+    "en": "Your path, reconstructed",
+    "fr": "Votre parcours, reconstitué"
+  },
+  "▶ Reproducir últimos 15 s": {
+    "en": "▶ Replay last 15 s",
+    "fr": "▶ Rejouer les 15 dernières secondes"
+  },
+  "Vista normalizada de la ventana: cada punto es una posición observada. El tamaño real de la página puede cambiar.": {
+    "en": "Normalized window view: each point is an observed position. The actual page size may change.",
+    "fr": "Vue normalisée de la fenêtre : chaque point est une position observée. La taille réelle de la page peut changer."
+  },
+  "Reproducción del recorrido del puntero": {
+    "en": "Pointer path replay",
+    "fr": "Relecture du parcours du pointeur"
+  },
+  "Mueve el puntero para crear un recorrido.": {
+    "en": "Move your pointer to create a path.",
+    "fr": "Déplacez le pointeur pour créer un parcours."
+  },
+  "Distancia observada": {
+    "en": "Observed distance",
+    "fr": "Distance observée"
+  },
+  "Velocidad del último tramo": {
+    "en": "Speed of the last segment",
+    "fr": "Vitesse du dernier segment"
+  },
+  "Clics consecutivos cercanos¹": {
+    "en": "Nearby consecutive clicks¹",
+    "fr": "Clics consécutifs rapprochés¹"
+  },
+  "¹ Menos de 800 ms y 30 px entre clics. No demuestra frustración. La distancia suma tramos observados, no movimientos fuera de esta página.": {
+    "en": "¹ Less than 800 ms and 30 px between clicks. This does not prove frustration. Distance adds observed segments, not movement outside this page.",
+    "fr": "¹ Moins de 800 ms et de 30 px entre les clics. Cela ne prouve pas la frustration. La distance additionne les segments observés, pas les mouvements hors de cette page."
+  },
+  "¿Qué llegó a estar en pantalla?": {
+    "en": "What appeared on screen?",
+    "fr": "Qu’est-ce qui est apparu à l’écran ?"
+  },
+  "Tiempo aproximado con al menos la mitad del bloque en la ventana y la pestaña visible. No demuestra lectura ni atención.": {
+    "en": "Approximate time with at least half the block in the window and the tab visible. This does not prove reading or attention.",
+    "fr": "Temps approximatif avec au moins la moitié du bloc dans la fenêtre et l’onglet visible. Cela ne prouve ni la lecture ni l’attention."
+  },
+  "La medición se detiene al pausar la captura. La superposición de otras ventanas no siempre se puede detectar.": {
+    "en": "Measurement stops when recording is paused. Overlapping windows cannot always be detected.",
+    "fr": "La mesure s’arrête lorsque la capture est en pause. Les fenêtres superposées ne sont pas toujours détectables."
+  },
+  "Tu punto de entrada": {
+    "en": "Your entry point",
+    "fr": "Votre point d’entrée"
+  },
+  "Mostramos solo el origen disponible, sin rutas ni parámetros. No es acceso a tu historial de navegación.": {
+    "en": "We only show the available origin, without paths or parameters. This is not access to your browsing history.",
+    "fr": "Nous affichons uniquement l’origine disponible, sans chemin ni paramètres. Cela ne donne pas accès à votre historique de navigation."
+  },
+  "Elegir un archivo ya revela información": {
+    "en": "Choosing a file already reveals information",
+    "fr": "Choisir un fichier révèle déjà des informations"
+  },
+  "Selecciona un archivo de prueba para ver sus metadatos antes de cualquier subida. Esta demo no lee su contenido ni lo sube.": {
+    "en": "Choose a test file to see its metadata before any upload. This demo neither reads its contents nor uploads it.",
+    "fr": "Choisissez un fichier de test pour voir ses métadonnées avant tout envoi. Cette démo ne lit pas son contenu et ne l’envoie pas."
+  },
+  "Archivo de prueba para mostrar metadatos": {
+    "en": "Test file for displaying metadata",
+    "fr": "Fichier de test pour afficher les métadonnées"
+  },
+  "Solo se puede inspeccionar el archivo que tú eliges. El nombre no se incluye en la exportación.": {
+    "en": "Only the file you choose can be inspected. Its name is not included in the export.",
+    "fr": "Seul le fichier que vous choisissez peut être inspecté. Son nom n’est pas inclus dans l’export."
+  },
+  "Hechos, hipótesis y límites": {
+    "en": "Facts, hypotheses and limits",
+    "fr": "Faits, hypothèses et limites"
+  },
+  "Esto ocurrió": {
+    "en": "This happened",
+    "fr": "Ce qui s’est passé"
+  },
+  "Todavía no hay actividad suficiente.": {
+    "en": "There is not enough activity yet.",
+    "fr": "Il n’y a pas encore assez d’activité."
+  },
+  "Podríamos suponer…": {
+    "en": "We might assume…",
+    "fr": "Nous pourrions supposer…"
+  },
+  "Volver a una zona podría indicar interés o dificultad. Corregir texto podría ser una revisión normal. Son posibilidades, no conclusiones sobre ti.": {
+    "en": "Returning to an area could suggest interest or difficulty. Editing text could be a normal revision. These are possibilities, not conclusions about you.",
+    "fr": "Revenir dans une zone pourrait indiquer de l’intérêt ou une difficulté. Corriger un texte pourrait être une simple révision. Ce sont des possibilités, pas des conclusions sur vous."
+  },
+  "Esto no lo sabemos": {
+    "en": "What we do not know",
+    "fr": "Ce que nous ignorons"
+  },
+  "No sabemos qué mirabas, qué pensabas ni por qué hiciste una pausa. El puntero no es un seguimiento de tus ojos.": {
+    "en": "We do not know what you were looking at, what you were thinking or why you paused. The pointer does not track your eyes.",
+    "fr": "Nous ne savons pas ce que vous regardiez, ce que vous pensiez ni pourquoi vous avez fait une pause. Le pointeur ne suit pas vos yeux."
+  },
+  "Incluso antes de tu primer clic": {
+    "en": "Even before your first click",
+    "fr": "Avant même votre premier clic"
+  },
+  "Tu navegador ya trae contexto.": {
+    "en": "Your browser already provides context.",
+    "fr": "Votre navigateur fournit déjà du contexte."
+  },
+  "Lecturas al abrir la página. El navegador puede limitar o modificar estos valores por privacidad.": {
+    "en": "Readings taken when the page opens. The browser may limit or modify these values for privacy.",
+    "fr": "Valeurs relevées à l’ouverture de la page. Le navigateur peut les limiter ou les modifier pour protéger la vie privée."
+  },
+  "Hay límites a lo que una página sabe.": {
+    "en": "There are limits to what a page knows.",
+    "fr": "Ce qu’une page sait a des limites."
+  },
+  "Tu nombre, tus contraseñas, el contenido de otras pestañas y tu historial completo no aparecen automáticamente en estos eventos.": {
+    "en": "Your name, passwords, other tabs’ contents and full browsing history do not automatically appear in these events.",
+    "fr": "Votre nom, vos mots de passe, le contenu des autres onglets et votre historique complet n’apparaissent pas automatiquement dans ces événements."
+  },
+  "Otros datos necesitan permiso.": {
+    "en": "Other data requires permission.",
+    "fr": "D’autres données nécessitent une autorisation."
+  },
+  "La cámara, el micrófono y la ubicación precisa normalmente requieren autorización. Aquí no los solicitamos.": {
+    "en": "The camera, microphone and precise location normally require permission. We do not request them here.",
+    "fr": "La caméra, le microphone et la position précise nécessitent normalement une autorisation. Nous ne les demandons pas ici."
+  },
+  "Conectarse también deja un rastro.": {
+    "en": "Connecting leaves a trace too.",
+    "fr": "Se connecter laisse aussi une trace."
+  },
+  "Un servidor recibe información de la conexión, como la IP. Esta demo no consulta tu IP. El alojamiento puede mantener sus propios registros técnicos.": {
+    "en": "A server receives connection information, such as the IP address. This demo does not look up your IP. The host may keep its own technical logs.",
+    "fr": "Un serveur reçoit des informations de connexion, comme l’adresse IP. Cette démo ne consulte pas votre IP. L’hébergeur peut conserver ses propres journaux techniques."
+  },
+  "Observar no es lo mismo que comprender": {
+    "en": "Observing is not the same as understanding",
+    "fr": "Observer ne signifie pas comprendre"
+  },
+  "Del gesto a una posible interpretación.": {
+    "en": "From a gesture to a possible interpretation.",
+    "fr": "Du geste à une interprétation possible."
+  },
+  "01 / OBSERVAR": {
+    "en": "01 / OBSERVE",
+    "fr": "01 / OBSERVER"
+  },
+  "02 / AGREGAR": {
+    "en": "02 / AGGREGATE",
+    "fr": "02 / AGRÉGER"
+  },
+  "03 / INFERIR": {
+    "en": "03 / INFER",
+    "fr": "03 / DÉDUIRE"
+  },
+  "«Pasó por aquí»": {
+    "en": "“They passed through here”",
+    "fr": "« Cette personne est passée ici »"
+  },
+  "Posición, instante, clic y elemento visitado. JavaScript escucha eventos y lee sus propiedades.": {
+    "en": "Position, time, click and visited element. JavaScript listens for events and reads their properties.",
+    "fr": "Position, instant, clic et élément visité. JavaScript écoute les événements et lit leurs propriétés."
+  },
+  "«Aquí se detiene más»": {
+    "en": "“They spend more time here”",
+    "fr": "« Cette personne s’arrête davantage ici »"
+  },
+  "Muchos eventos pueden formar mapas de calor, recorridos y estadísticas de uso. Aquí solo ves tu sesión.": {
+    "en": "Many events can form heatmaps, paths and usage statistics. Here you only see your own session.",
+    "fr": "De nombreux événements peuvent former des cartes de chaleur, des parcours et des statistiques d’usage. Ici, vous ne voyez que votre session."
+  },
+  "«Quizá le interesa»": {
+    "en": "“They might be interested”",
+    "fr": "« Cela l’intéresse peut-être »"
+  },
+  "Se pueden formular hipótesis sobre interés o dificultad, mejorar interfaces o personalizar contenido. Una hipótesis puede equivocarse.": {
+    "en": "Hypotheses about interest or difficulty can help improve interfaces or personalize content. A hypothesis can be wrong.",
+    "fr": "Des hypothèses sur l’intérêt ou la difficulté peuvent aider à améliorer les interfaces ou à personnaliser le contenu. Une hypothèse peut être fausse."
+  },
+  "¿Sucede en sitios como Amazon?": {
+    "en": "Does this happen on sites like Amazon?",
+    "fr": "Cela arrive-t-il sur des sites comme Amazon ?"
+  },
+  "Su aviso de privacidad enumera información de interacción como scroll, clics y paso del mouse sobre elementos. Esto no significa que cada sitio registre todo, ni nos dice cómo se procesa cada evento.": {
+    "en": "Its privacy notice lists interaction information such as scrolling, clicks and hovering over elements. This does not mean every site records everything or tell us how each event is processed.",
+    "fr": "Sa politique de confidentialité mentionne des interactions comme le défilement, les clics et le survol des éléments. Cela ne signifie pas que chaque site enregistre tout et ne précise pas comment chaque événement est traité."
+  },
+  "Leer el aviso de privacidad de Amazon ↗": {
+    "en": "Read Amazon’s privacy notice ↗",
+    "fr": "Lire la politique de confidentialité d’Amazon ↗"
+  },
+  "La pequeña pieza de JavaScript detrás de la sorpresa.": {
+    "en": "The small piece of JavaScript behind the surprise.",
+    "fr": "Le petit morceau de JavaScript derrière la surprise."
+  },
+  "Escuchar un evento no lo transmite automáticamente. Enviarlo a una empresa requiere código adicional. Esta demo no incorpora analítica ni transmisión de tus eventos.": {
+    "en": "Listening for an event does not automatically transmit it. Sending it to a company requires extra code. This demo has no analytics or event transmission.",
+    "fr": "Écouter un événement ne le transmet pas automatiquement. L’envoyer à une entreprise nécessite du code supplémentaire. Cette démo n’intègre ni outil d’analyse ni transmission de vos événements."
+  },
+  "Explorar pointermove en MDN ↗": {
+    "en": "Explore pointermove on MDN ↗",
+    "fr": "Découvrir pointermove sur MDN ↗"
+  },
+  "¹ Suma de los tamaños de los eventos serializados en JSON UTF-8. No equivale a tráfico de red ni a memoria utilizada. La frecuencia de eventos depende del navegador y del dispositivo.": {
+    "en": "¹ Sum of event sizes serialized as UTF-8 JSON. This is not network traffic or memory usage. Event frequency depends on the browser and device.",
+    "fr": "¹ Somme des tailles des événements sérialisés en JSON UTF-8. Ce n’est ni le trafic réseau ni la mémoire utilisée. La fréquence dépend du navigateur et de l’appareil."
+  },
+  "Se conservan los últimos 3.000 eventos y 800 puntos de dibujo en memoria. El contador incluye todos los eventos observados. Exportar genera un archivo local con el resumen y los eventos retenidos. Borrar o recargar elimina la sesión de la demo.": {
+    "en": "The last 3,000 events and 800 drawing points are kept in memory. The counter includes all observed events. Export creates a local file with the summary and retained events. Clearing or reloading removes the demo session.",
+    "fr": "Les 3 000 derniers événements et 800 points de dessin sont conservés en mémoire. Le compteur inclut tous les événements observés. L’export crée un fichier local contenant le résumé et les événements conservés. Effacer ou recharger supprime la session de la démo."
+  },
+  "HUELLA VIVA · Un laboratorio para mirar lo invisible.": {
+    "en": "HUELLA VIVA · A lab for seeing the invisible.",
+    "fr": "HUELLA VIVA · Un laboratoire pour voir l’invisible."
+  },
+  "Idioma": {
+    "en": "Language",
+    "fr": "Langue"
+  },
+  "Zona horaria": {
+    "en": "Time zone",
+    "fr": "Fuseau horaire"
+  },
+  "Pantalla": {
+    "en": "Screen",
+    "fr": "Écran"
+  },
+  "Ventana inicial": {
+    "en": "Initial window",
+    "fr": "Fenêtre initiale"
+  },
+  "Densidad de píxeles": {
+    "en": "Pixel density",
+    "fr": "Densité de pixels"
+  },
+  "Puntos táctiles": {
+    "en": "Touch points",
+    "fr": "Points tactiles"
+  },
+  "Procesadores lógicos": {
+    "en": "Logical processors",
+    "fr": "Processeurs logiques"
+  },
+  "Movimiento reducido": {
+    "en": "Reduced motion",
+    "fr": "Animations réduites"
+  },
+  "No disponible": {
+    "en": "Unavailable",
+    "fr": "Indisponible"
+  },
+  "Solicitado": {
+    "en": "Requested",
+    "fr": "Demandé"
+  },
+  "No solicitado": {
+    "en": "Not requested",
+    "fr": "Non demandé"
+  },
+  "Espacio": {
+    "en": "Space",
+    "fr": "Espace"
+  },
+  "En pausa": {
+    "en": "Paused",
+    "fr": "En pause"
+  },
+  "Sesión borrada: eventos, texto y trazos eliminados de la memoria de la demo.": {
+    "en": "Session cleared: events, text and trails removed from the demo’s memory.",
+    "fr": "Session effacée : événements, texte et tracés supprimés de la mémoire de la démo."
+  },
+  "Exportación preparada. Incluye las teclas registradas en el campo de prueba.": {
+    "en": "Export ready. It includes the keys recorded in the test field.",
+    "fr": "Export prêt. Il inclut les touches enregistrées dans le champ de test."
+  },
+  "Zona del puntero": {
+    "en": "Pointer area",
+    "fr": "Zone du pointeur"
+  },
+  "Teclado": {
+    "en": "Keyboard",
+    "fr": "Clavier"
+  },
+  "Texto borrado": {
+    "en": "Deleted text",
+    "fr": "Texte effacé"
+  },
+  "Selección": {
+    "en": "Selection",
+    "fr": "Sélection"
+  },
+  "Recorrido": {
+    "en": "Path",
+    "fr": "Parcours"
+  },
+  "Medición no disponible en este navegador.": {
+    "en": "Measurement unavailable in this browser.",
+    "fr": "Mesure indisponible dans ce navigateur."
+  },
+  "No comunicado por el navegador (entrada directa o política de privacidad).": {
+    "en": "Not provided by the browser (direct visit or privacy policy).",
+    "fr": "Non communiqué par le navigateur (accès direct ou politique de confidentialité)."
+  },
+  "Nombre": {
+    "en": "Name",
+    "fr": "Nom"
+  },
+  "Tamaño": {
+    "en": "Size",
+    "fr": "Taille"
+  },
+  "Tipo declarado": {
+    "en": "Declared type",
+    "fr": "Type déclaré"
+  },
+  "Última modificación": {
+    "en": "Last modified",
+    "fr": "Dernière modification"
+  },
+  "Mueve el puntero primero: faltan puntos recientes.": {
+    "en": "Move your pointer first: not enough recent points.",
+    "fr": "Déplacez d’abord le pointeur : il manque des points récents."
+  },
+  "Reproducción terminada. Es tu recorrido observado, no el de tus ojos.": {
+    "en": "Replay finished. This is your observed pointer path, not your eye movements.",
+    "fr": "Relecture terminée. Il s’agit du parcours observé du pointeur, pas de celui de vos yeux."
+  },
+  "Huella viva — Cada gesto cuenta": {
+    "en": "Huella viva — Every gesture counts",
+    "fr": "Huella viva — Chaque geste compte"
+  },
+  "Descubre en tiempo real cómo tus movimientos, teclas y clics se convierten en datos.": {
+    "en": "Discover in real time how your movements, keystrokes and clicks become data.",
+    "fr": "Découvrez en temps réel comment vos mouvements, frappes et clics deviennent des données."
+  },
+  "Elegir archivo": {
+    "en": "Choose file",
+    "fr": "Choisir un fichier"
+  },
+  "document.addEventListener('pointermove', (evento) => {\n  const dato = {\n    tipo: evento.type,\n    x: evento.clientX,\n    y: evento.clientY,\n    tiempo: performance.now()\n  };\n  // Ahora puedes mostrarlo, contarlo o guardarlo.\n});": {
+    "en": "document.addEventListener('pointermove', (evento) => {\n  const dato = {\n    tipo: evento.type,\n    x: evento.clientX,\n    y: evento.clientY,\n    tiempo: performance.now()\n  };\n  // Now you can display, count or store it.\n});",
+    "fr": "document.addEventListener('pointermove', (evento) => {\n  const dato = {\n    tipo: evento.type,\n    x: evento.clientX,\n    y: evento.clientY,\n    tiempo: performance.now()\n  };\n  // Vous pouvez maintenant l’afficher, le compter ou le conserver.\n});"
+  }
+};
+const textSources=new WeakMap(), attributeSources=new WeakMap();
+function translate(value){
+  const text=String(value), key=text.trim(), entry=translations[key];
+  if(entry)return text.replace(key,language==='es'?key:entry[language]);
+  let match;
+  if((match=key.match(/^Pegaste (\d+) caracteres de una vez\.$/)))return language==='en'?`You pasted ${match[1]} characters at once.`:language==='fr'?`Vous avez collé ${match[1]} caractères à la fois.`:text;
+  if((match=key.match(/^Reproduciendo (\d+) puntos · velocidad real$/)))return language==='en'?`Replaying ${match[1]} points · real time`:language==='fr'?`Relecture de ${match[1]} points · vitesse réelle`:text;
+  if((match=key.match(/^(\d+) eventos, (\d+) pulsaciones en el campo de prueba, (\d+) eventos de scroll y (\d+) cambios a página oculta\.$/)))return language==='en'?`${match[1]} events, ${match[2]} keystrokes in the test field, ${match[3]} scroll events and ${match[4]} times the page was hidden.`:language==='fr'?`${match[1]} événements, ${match[2]} frappes dans le champ de test, ${match[3]} événements de défilement et ${match[4]} passages à une page masquée.`:text;
+  return text;
+}
+function setLocalized(element,value){
+  element.textContent=translate(value);
+  if(element.firstChild)textSources.set(element.firstChild,String(value));
+}
+function captureTranslations(){
+  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);
+  while(walker.nextNode()){
+    const node=walker.currentNode;
+    if(!node.parentElement.closest('script,style')&&translations[node.textContent.trim()])textSources.set(node,node.textContent);
+  }
+  document.querySelectorAll('[placeholder],[aria-label],meta[name="description"]').forEach(element=>{
+    const attrs={};
+    for(const name of ['placeholder','aria-label','content'])if(element.hasAttribute(name)&&translations[element.getAttribute(name)])attrs[name]=element.getAttribute(name);
+    attributeSources.set(element,attrs);
+  });
+}
+function setLanguage(next){
+  if(!['es','en','fr'].includes(next))return;
+  language=next;
+  document.documentElement.lang=next;
+  const walker=document.createTreeWalker(document.documentElement,NodeFilter.SHOW_TEXT);
+  while(walker.nextNode()){
+    const node=walker.currentNode,source=textSources.get(node);
+    if(source!==undefined)node.textContent=translate(source);
+  }
+  document.querySelectorAll('[placeholder],[aria-label],meta[name="description"]').forEach(element=>{
+    for(const [name,source] of Object.entries(attributeSources.get(element)||{}))element.setAttribute(name,translate(source));
+  });
+  document.querySelectorAll('[data-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===next)));
+  sizeCanvas();
+}
+captureTranslations();
+document.querySelectorAll('[data-language]').forEach(button=>button.addEventListener('click',()=>setLanguage(button.dataset.language)));
+
 const $=id=>document.getElementById(id),encoder=new TextEncoder();
 const canvas=$('canvas'),ctx=canvas.getContext('2d');
 let active=true,events=[],recent=[],points=[],total=0,bytes=0,clicks=0,keycount=0,scrolls=0,hidden=0,depth=0;
@@ -44,9 +711,9 @@ function draw(){const r=canvas.getBoundingClientRect();ctx.clearRect(0,0,r.width
 function sizeCanvas(){const r=canvas.getBoundingClientRect();canvas.width=Math.round(r.width*devicePixelRatio);canvas.height=Math.round(r.height*devicePixelRatio);ctx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);draw();}
 function point(e,click=false){const r=canvas.getBoundingClientRect();points.push({x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height,click,start:entering});entering=false;if(points.length>800)points.shift();dirty=true;}
 $('field').addEventListener('pointerleave',()=>entering=true);
-document.addEventListener('pointermove',e=>{if(!active)return;$('x').textContent=Math.round(e.clientX);$('y').textContent=Math.round(e.clientY);$('pointer').textContent=e.pointerType;record('pointermove',{x:Math.round(e.clientX),y:Math.round(e.clientY),pointer:e.pointerType});if(e.target===canvas)point(e);},{passive:true});
+document.addEventListener('pointermove',e=>{if(!active)return;setLocalized($('x'),Math.round(e.clientX));setLocalized($('y'),Math.round(e.clientY));$('pointer').textContent=e.pointerType;record('pointermove',{x:Math.round(e.clientX),y:Math.round(e.clientY),pointer:e.pointerType});if(e.target===canvas)point(e);},{passive:true});
 document.addEventListener('click',e=>{if(!active||e.target.closest('button'))return;clicks++;record('click',{x:Math.round(e.clientX),y:Math.round(e.clientY),element:e.target.tagName});if(e.target===canvas)point(e,true);});
-$('typing').addEventListener('keydown',e=>{if(!active)return;const now=performance.now(),interval=lastKey===null?null:Math.round(now-lastKey);lastKey=now;keycount++;$('interval').textContent=interval===null?'—':interval;const key=document.createElement('span');key.className='key';key.textContent=e.key===' '?'Espacio':e.key;if(keycount===1)$('keys').replaceChildren();$('keys').append(key);while($('keys').children.length>8)$('keys').firstChild.remove();record('keydown',{key:e.key,code:e.code,repeat:e.repeat,shift:e.shiftKey,intervalMs:interval});});
+$('typing').addEventListener('keydown',e=>{if(!active)return;const now=performance.now(),interval=lastKey===null?null:Math.round(now-lastKey);lastKey=now;keycount++;setLocalized($('interval'),interval===null?'—':interval);const key=document.createElement('span');key.className='key';if(e.key===' ')setLocalized(key,'Espacio');else key.textContent=e.key;if(keycount===1)$('keys').replaceChildren();$('keys').append(key);while($('keys').children.length>8)$('keys').firstChild.remove();record('keydown',{key:e.key,code:e.code,repeat:e.repeat,shift:e.shiftKey,intervalMs:interval});});
 $('typing').addEventListener('blur',()=>lastKey=null);
 $('typing').addEventListener('input',e=>record('input',{inputType:e.inputType,characters:e.target.value.length}));
 document.addEventListener('scroll',()=>{if(!active)return;const max=document.documentElement.scrollHeight-innerHeight,pct=max>0?Math.max(0,Math.min(100,Math.round(scrollY/max*100))):0;depth=Math.max(depth,pct);scrolls++;$('scrollbar').style.width=pct+'%';record('scroll',{y:Math.round(scrollY),percent:pct});},{passive:true});
@@ -54,40 +721,39 @@ document.addEventListener('visibilitychange',()=>{if(active&&document.hidden)hid
 window.addEventListener('resize',()=>{record('resize',{width:innerWidth,height:innerHeight});sizeCanvas();});
 window.addEventListener('online',()=>record('connection',{online:true}));window.addEventListener('offline',()=>record('connection',{online:false}));
 const environment={'Idioma':navigator.language,'Zona horaria':Intl.DateTimeFormat().resolvedOptions().timeZone,'Pantalla':screen.width+' × '+screen.height+' px','Ventana inicial':innerWidth+' × '+innerHeight+' px','Densidad de píxeles':devicePixelRatio,'Puntos táctiles':navigator.maxTouchPoints??'No disponible','Procesadores lógicos':navigator.hardwareConcurrency??'No disponible','Movimiento reducido':matchMedia('(prefers-reduced-motion: reduce)').matches?'Solicitado':'No solicitado'};
-Object.entries(environment).forEach(([name,value])=>{const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=name;dd.textContent=value;row.append(dt,dd);$('device').append(row);});
-$('pause').onclick=()=>{syncClock();active=!active;lastKey=null;entering=true;$('pause').textContent=active?'Ⅱ Pausar':'▶ Reanudar';$('status').textContent=active?'● CAPTURA ACTIVA · SOLO EN ESTA PÁGINA':'Ⅱ CAPTURA PAUSADA';if(active)lastActivity=performance.now();};
-$('reset').onclick=()=>{events=[];recent=[];points=[];total=bytes=clicks=keycount=scrolls=hidden=depth=activeMs=0;lastKey=last=null;tick=lastActivity=performance.now();entering=true;dirty=true;$('typing').value='';$('keys').replaceChildren();$('interval').textContent='—';['x','y','pointer'].forEach(id=>$(id).textContent='—');$('scrollbar').style.width='0%';$('notice').textContent='Sesión borrada: eventos, texto y trazos eliminados de la memoria de la demo.';draw();};
+Object.entries(environment).forEach(([name,value])=>{const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');setLocalized(dt,name);setLocalized(dd,value);row.append(dt,dd);$('device').append(row);});
+$('pause').onclick=()=>{syncClock();active=!active;lastKey=null;entering=true;setLocalized($('pause'),active?'Ⅱ Pausar':'▶ Reanudar');setLocalized($('status'),active?'● CAPTURA ACTIVA · SOLO EN ESTA PÁGINA':'Ⅱ CAPTURA PAUSADA');if(active)lastActivity=performance.now();};
+$('reset').onclick=()=>{events=[];recent=[];points=[];total=bytes=clicks=keycount=scrolls=hidden=depth=activeMs=0;lastKey=last=null;tick=lastActivity=performance.now();entering=true;dirty=true;$('typing').value='';$('keys').replaceChildren();setLocalized($('interval'),'—');['x','y','pointer'].forEach(id=>setLocalized($(id),'—'));$('scrollbar').style.width='0%';setLocalized($('notice'),'Sesión borrada: eventos, texto y trazos eliminados de la memoria de la demo.');draw();};
 function download(content,type,name){const url=URL.createObjectURL(new Blob([content],{type}));const a=document.createElement('a');a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1500);}
-$('export').onclick=()=>{download(JSON.stringify({exportedAt:new Date().toISOString(),environment,summary:{eventsObserved:total,jsonEventBytes:bytes,retainedEvents:events.length,clicks,keycount,scrolls,hidden,depth},events},null,2),'application/json','huella-viva.json');$('notice').textContent='Exportación preparada. Incluye las teclas registradas en el campo de prueba.';};
+$('export').onclick=()=>{download(JSON.stringify({exportedAt:new Date().toISOString(),environment,summary:{eventsObserved:total,jsonEventBytes:bytes,retainedEvents:events.length,clicks,keycount,scrolls,hidden,depth},events},null,2),'application/json','huella-viva.json');setLocalized($('notice'),'Exportación preparada. Incluye las teclas registradas en el campo de prueba.');};
 $('download').onclick=()=>download(initialHTML,'text/html;charset=utf-8','huella-viva.html');
-function render(now){syncClock();recent=recent.filter(t=>now-t<1000);if(now-lastPaint>100){lastPaint=now;$('total').textContent=total.toLocaleString('es');$('rate').textContent=recent.length;$('bytes').textContent=bytes<1024?bytes+' B':bytes<1048576?(bytes/1024).toFixed(1)+' KiB':(bytes/1048576).toFixed(2)+' MiB';$('elapsed').textContent=Math.floor(activeMs/1000)+' s';$('clicks').textContent=clicks;$('keycount').textContent=keycount;$('scrolls').textContent=scrolls;$('hidden').textContent=hidden;$('depth').textContent=depth+' %';$('idle').textContent=active?Math.floor((now-lastActivity)/1000)+' s':'En pausa';if(dirty){$('latest').textContent=last?JSON.stringify(last,null,2):'Esperando tu primer gesto…';$('feed').replaceChildren();events.slice(-8).reverse().forEach(e=>{const row=document.createElement('div');row.className='event';const label=document.createElement('span');label.textContent=e.type;row.append(label,document.createTextNode(e.time+' ms'));$('feed').append(row);});draw();dirty=false;}}requestAnimationFrame(render);}
+function render(now){syncClock();recent=recent.filter(t=>now-t<1000);if(now-lastPaint>100){lastPaint=now;setLocalized($('total'),total.toLocaleString(language));setLocalized($('rate'),recent.length);setLocalized($('bytes'),bytes<1024?bytes+' B':bytes<1048576?(bytes/1024).toFixed(1)+' KiB':(bytes/1048576).toFixed(2)+' MiB');setLocalized($('elapsed'),Math.floor(activeMs/1000)+' s');setLocalized($('clicks'),clicks);setLocalized($('keycount'),keycount);setLocalized($('scrolls'),scrolls);setLocalized($('hidden'),hidden);setLocalized($('depth'),depth+' %');setLocalized($('idle'),active?Math.floor((now-lastActivity)/1000)+' s':'En pausa');if(dirty){if(last)$('latest').textContent=JSON.stringify(last,null,2);else setLocalized($('latest'),'Esperando tu primer gesto…');$('feed').replaceChildren();events.slice(-8).reverse().forEach(e=>{const row=document.createElement('div');row.className='event';const label=document.createElement('span');setLocalized(label,e.type);row.append(label,document.createTextNode(e.time+' ms'));$('feed').append(row);});draw();dirty=false;}}requestAnimationFrame(render);}
 
 const draftLog=[], exposureState=new Map(), replayPoints=[];
 let distance=0,speed=0,clusters=0,lastMove=null,lastClick=null,replayFrame=0,exposureTick=performance.now();
 const replayCtx=$('replay-canvas').getContext('2d');
 const exposureNames=[['field','Zona del puntero'],['typing','Teclado'],['draft','Texto borrado'],['selection-demo','Selección'],['replay-canvas','Recorrido']];
-for(const [id,label] of exposureNames){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent='0.0 s';row.append(dt,dd);$('exposure').append(row);exposureState.set(id,{ms:0,visible:false,dd});}
+for(const [id,label] of exposureNames){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');setLocalized(dt,label);dd.textContent='0.0 s';row.append(dt,dd);$('exposure').append(row);exposureState.set(id,{ms:0,visible:false,dd});}
 const observer=typeof IntersectionObserver==='function'?new IntersectionObserver(entries=>{for(const e of entries){const state=exposureState.get(e.target.id);state.visible=e.isIntersecting&&e.intersectionRatio>=.5;}},{threshold:[0,.5,1]}):null;
-if(observer)for(const [id] of exposureNames)observer.observe($(id));else $('exposure').textContent='Medición no disponible en este navegador.';
-function renderHistory(){$('draft-history').replaceChildren();for(const item of draftLog.slice().reverse()){const p=document.createElement('p');p.textContent=item.time+' ms · '+item.kind+' · '+(item.text||'[campo vacío]');$('draft-history').append(p);}if(!draftLog.length)$('draft-history').textContent='Historial vacío.';}
+if(observer)for(const [id] of exposureNames)observer.observe($(id));else setLocalized($('exposure'),'Medición no disponible en este navegador.');
+function renderHistory(){$('draft-history').replaceChildren();for(const item of draftLog.slice().reverse()){const p=document.createElement('p');const kind=document.createElement('span'),content=document.createElement('span');setLocalized(kind,item.kind);if(item.text)content.textContent=item.text;else setLocalized(content,'[campo vacío]');p.append(document.createTextNode(item.time+' ms · '),kind,document.createTextNode(' · '),content);$('draft-history').append(p);}if(!draftLog.length)setLocalized($('draft-history'),'Historial vacío.');}
 $('history-consent').onchange=()=>{$('draft').disabled=!active||!$('history-consent').checked;if(!$('history-consent').checked){draftLog.length=0;$('draft').value='';renderHistory();}};
 $('draft').addEventListener('input',e=>{if(!active||!$('history-consent').checked)return;draftLog.push({time:Math.round(activeMs),kind:e.inputType||'edición',text:e.target.value.slice(0,240)});if(draftLog.length>30)draftLog.shift();renderHistory();record('draft-edit',{inputType:e.inputType,characters:e.target.value.length});});
 document.addEventListener('selectionchange',()=>{if(!active)return;const selection=getSelection();const target=$('selection-demo');const inside=selection&&target.contains(selection.anchorNode)&&target.contains(selection.focusNode);const value=inside?selection.toString().slice(0,120):'';$('selection-result').textContent=value||'—';if(value)record('selection',{characters:selection.toString().length});});
-$('paste-demo').addEventListener('paste',e=>{if(!active)return;const length=e.clipboardData?.getData('text/plain').length??0;$('paste-result').textContent='Pegaste '+length+' caracteres de una vez.';record('paste',{characters:length});});
+$('paste-demo').addEventListener('paste',e=>{if(!active)return;const length=e.clipboardData?.getData('text/plain').length??0;setLocalized($('paste-result'),'Pegaste '+length+' caracteres de una vez.');record('paste',{characters:length});});
 let shownOrigin='No comunicado por el navegador (entrada directa o política de privacidad).';
 try{if(document.referrer)shownOrigin=new URL(document.referrer).origin;}catch{}
-$('referrer').textContent=shownOrigin;
-$('file-demo').addEventListener('change',e=>{if(!active)return;$('file-meta').replaceChildren();const f=e.target.files[0];if(!f)return;for(const [label,value] of [['Nombre',f.name],['Tamaño',f.size+' bytes'],['Tipo declarado',f.type||'No disponible'],['Última modificación',new Date(f.lastModified).toLocaleString('es')]]){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;row.append(dt,dd);$('file-meta').append(row);}record('file-selected',{bytes:f.size,mime:f.type||null});});
+setLocalized($('referrer'),shownOrigin);
+$('file-demo').addEventListener('change',e=>{if(!active)return;$('file-meta').replaceChildren();const f=e.target.files[0];if(!f)return;for(const [label,value] of [['Nombre',f.name],['Tamaño',f.size+' bytes'],['Tipo declarado',f.type||'No disponible'],['Última modificación',new Date(f.lastModified).toLocaleString(language)]]){const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');setLocalized(dt,label);if(label==='Tipo declarado'&&!f.type)setLocalized(dd,value);else dd.textContent=value;row.append(dt,dd);$('file-meta').append(row);}record('file-selected',{bytes:f.size,mime:f.type||null});});
 document.addEventListener('pointermove',e=>{if(!active)return;const now=performance.now();if(lastMove&&now-lastMove.t<1000){const delta=Math.hypot(e.clientX-lastMove.x,e.clientY-lastMove.y);distance+=delta;speed=delta/Math.max(1,now-lastMove.t)*1000;}else speed=0;lastMove={x:e.clientX,y:e.clientY,t:now};const prev=replayPoints.at(-1);if(!prev||activeMs-prev.t>=30){replayPoints.push({x:e.clientX/innerWidth,y:e.clientY/innerHeight,t:activeMs});if(replayPoints.length>600)replayPoints.shift();}},{passive:true});
 document.documentElement.addEventListener('pointerleave',()=>lastMove=null);
 document.addEventListener('click',e=>{if(!active||e.target.closest('button'))return;const now=performance.now();if(lastClick&&now-lastClick.t<800&&Math.hypot(e.clientX-lastClick.x,e.clientY-lastClick.y)<30)clusters++;lastClick={x:e.clientX,y:e.clientY,t:now};});
-$('replay').onclick=()=>{cancelAnimationFrame(replayFrame);const samples=replayPoints.filter(p=>p.t>=activeMs-15000).map(p=>({...p}));replayCtx.clearRect(0,0,600,240);if(samples.length<2){$('replay-status').textContent='Mueve el puntero primero: faltan puntos recientes.';return;}const start=performance.now(),first=samples[0].t;let index=0;$('replay-status').textContent='Reproduciendo '+samples.length+' puntos · velocidad real';function frame(now){while(index<samples.length&&samples[index].t-first<=now-start){const p=samples[index],prev=samples[index-1];if(prev){replayCtx.strokeStyle='#cdf58b';replayCtx.lineWidth=2;replayCtx.beginPath();replayCtx.moveTo(prev.x*600,prev.y*240);replayCtx.lineTo(p.x*600,p.y*240);replayCtx.stroke();}index++;}if(index<samples.length)replayFrame=requestAnimationFrame(frame);else $('replay-status').textContent='Reproducción terminada. Es tu recorrido observado, no el de tus ojos.';}replayFrame=requestAnimationFrame(frame);};
-setInterval(()=>{const now=performance.now(),dt=Math.min(500,now-exposureTick);exposureTick=now;for(const state of exposureState.values()){if(active&&!document.hidden&&state.visible)state.ms+=dt;state.dd.textContent=(state.ms/1000).toFixed(1)+' s';}$('distance').textContent=Math.round(distance).toLocaleString('es')+' px CSS';$('speed').textContent=Math.round(speed)+' px/s';$('clusters').textContent=clusters;$('facts').textContent=total+' eventos, '+keycount+' pulsaciones en el campo de prueba, '+scrolls+' eventos de scroll y '+hidden+' cambios a página oculta.';},250);
+$('replay').onclick=()=>{cancelAnimationFrame(replayFrame);const samples=replayPoints.filter(p=>p.t>=activeMs-15000).map(p=>({...p}));replayCtx.clearRect(0,0,600,240);if(samples.length<2){setLocalized($('replay-status'),'Mueve el puntero primero: faltan puntos recientes.');return;}const start=performance.now(),first=samples[0].t;let index=0;setLocalized($('replay-status'),'Reproduciendo '+samples.length+' puntos · velocidad real');function frame(now){while(index<samples.length&&samples[index].t-first<=now-start){const p=samples[index],prev=samples[index-1];if(prev){replayCtx.strokeStyle='#cdf58b';replayCtx.lineWidth=2;replayCtx.beginPath();replayCtx.moveTo(prev.x*600,prev.y*240);replayCtx.lineTo(p.x*600,p.y*240);replayCtx.stroke();}index++;}if(index<samples.length)replayFrame=requestAnimationFrame(frame);else setLocalized($('replay-status'),'Reproducción terminada. Es tu recorrido observado, no el de tus ojos.');}replayFrame=requestAnimationFrame(frame);};
+setInterval(()=>{const now=performance.now(),dt=Math.min(500,now-exposureTick);exposureTick=now;for(const state of exposureState.values()){if(active&&!document.hidden&&state.visible)state.ms+=dt;setLocalized(state.dd,(state.ms/1000).toFixed(1)+' s');}setLocalized($('distance'),Math.round(distance).toLocaleString(language)+' px CSS');setLocalized($('speed'),Math.round(speed)+' px/s');setLocalized($('clusters'),clusters);setLocalized($('facts'),total+' eventos, '+keycount+' pulsaciones en el campo de prueba, '+scrolls+' eventos de scroll y '+hidden+' cambios a página oculta.');},250);
 const oldPause=$('pause').onclick;
 $('pause').onclick=()=>{oldPause();lastMove=lastClick=null;speed=0;exposureTick=performance.now();$('draft').disabled=!active||!$('history-consent').checked;$('file-demo').disabled=!active;$('paste-demo').disabled=!active;};
 const oldReset=$('reset').onclick;
-$('reset').onclick=()=>{oldReset();cancelAnimationFrame(replayFrame);draftLog.length=0;replayPoints.length=0;distance=speed=clusters=0;lastMove=lastClick=null;$('draft').value='';$('history-consent').checked=false;$('draft').disabled=true;renderHistory();$('paste-demo').value='';$('paste-result').textContent='Aún no has pegado nada en este campo.';$('selection-result').textContent='—';$('file-demo').value='';$('file-meta').replaceChildren();replayCtx.clearRect(0,0,600,240);$('replay-status').textContent='Mueve el puntero para crear un recorrido.';for(const state of exposureState.values()){state.ms=0;state.dd.textContent='0.0 s';}exposureTick=performance.now();};
+$('reset').onclick=()=>{oldReset();cancelAnimationFrame(replayFrame);draftLog.length=0;replayPoints.length=0;distance=speed=clusters=0;lastMove=lastClick=null;$('draft').value='';$('history-consent').checked=false;$('draft').disabled=true;renderHistory();$('paste-demo').value='';setLocalized($('paste-result'),'Aún no has pegado nada en este campo.');$('selection-result').textContent='—';$('file-demo').value='';$('file-meta').replaceChildren();replayCtx.clearRect(0,0,600,240);setLocalized($('replay-status'),'Mueve el puntero para crear un recorrido.');for(const state of exposureState.values()){state.ms=0;setLocalized(state.dd,'0.0 s');}exposureTick=performance.now();};
 
 sizeCanvas();requestAnimationFrame(render);
 </script></body></html>
-
